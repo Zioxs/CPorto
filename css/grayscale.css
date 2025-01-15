@@ -377,3 +377,22 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+/* Animation think */
+
+@keyframes reveal {
+    from{
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: 0;
+    }
+}
+
+.reveal {
+    display: block;
+    opacity: 0;
+    animation: reveal .8s forwards;
+}
