@@ -3,13 +3,28 @@
  * Code licensed under the Apache License v2.0.
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
+ @import url('https://fonts.cdnfonts.com/css/panton');
+
+:root {
+    --black: #101010;
+    --white: #ffffff;
+    --secondary: #c775fe;
+    --dark_secondary: #28003B;
+}
 
 body {
     width: 100%;
     height: 100%;
-    font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #fff;
-    background-color: #101010;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+    /* font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif; */
+    color: var(--white);
+    background-color: var(--black);
+}
+
+p {
+    color: rgb(189, 189, 189);
 }
 
 html {
@@ -26,7 +41,7 @@ h5,
 h6 {
     margin: 0 0 35px;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Panton', sans-serif;
     font-weight: 700;
     letter-spacing: 1px;
 }
@@ -34,7 +49,7 @@ h6 {
 p {
     margin: 0 0 25px;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 24px;
 }
 
 @media(min-width:768px) {
@@ -46,7 +61,7 @@ p {
 }
 
 a {
-    color: #42dca3;
+    color: var(--secondary);
     -webkit-transition: all .2s ease-in-out;
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -55,19 +70,19 @@ a {
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #1d9b6c;
+    color: var(--secondary);
 }
 
 .light {
-    font-weight: 400;
+    font-weight: 380;
 }
 
 .navbar-custom {
     margin-bottom: 0;
     border-bottom: 1px solid rgba(255,255,255,.3);
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background-color: #101010;
+    font-family: 'Panton', sans-serif;
+    background-color: var(--black);
     
 }
 
@@ -82,7 +97,7 @@ a:focus {
 .navbar-custom .navbar-brand .navbar-toggle {
     padding: 4px 6px;
     font-size: 16px;
-    color: #fff;
+    color: var(--white);
 }
 
 .navbar-custom .navbar-brand .navbar-toggle:focus,
@@ -91,7 +106,7 @@ a:focus {
 }
 
 .navbar-custom a {
-    color: #fff;
+    color: var(--white);
 }
 
 .navbar-custom .nav li a {
@@ -121,7 +136,7 @@ a:focus {
 }
 
 .navbar-custom .nav li.active a:hover {
-    color: #fff;
+    color: var(--white);
 }
 
 @media(min-width:768px) {
@@ -138,7 +153,6 @@ a:focus {
     .navbar-custom.top-nav-collapse {
         padding: 0;
         border-bottom: 0px;
-        background: rgb(16,16,16);
         background: linear-gradient(180deg, rgba(16,16,16,0.7372198879551821) 17%, rgba(16,16,16,0.7372198879551821) 88%, rgba(0,212,255,0) 100%);
         /* background: #10101075; */
         /* -webkit-backdrop-filter: blur(10px) saturate(180%);
@@ -154,7 +168,7 @@ a:focus {
     text-align: center;
     color: #fff;
     background: url(../img/intro-bg.png) no-repeat bottom center scroll;
-    background-color: #000;
+    background-color: var(--black);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -167,7 +181,7 @@ a:focus {
 }
 
 .intro .intro-body .brand-heading {
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .intro .intro-body .intro-text {
@@ -194,10 +208,10 @@ a:focus {
     height: 70px;
     margin-top: 15px;
     padding: 7px 16px;
-    border: 2px solid #fff;
+    border: 2px solid var(--white);
     border-radius: 100%!important;
     font-size: 40px;
-    color: #fff;
+    color: var(--white);
     background: 0 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
@@ -207,7 +221,7 @@ a:focus {
 .btn-circle:hover,
 .btn-circle:focus {
     outline: 0;
-    color: #fff;
+    color: var(--white);
     background: rgba(255,255,255,.1);
 }
 
@@ -265,20 +279,69 @@ a:focus {
 
 .content-section {
     padding-top: 100px;
+    padding-bottom: 200px;
 }
 
-.download-section {
+.project-section {
     width: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    height: 100%;
+    /* padding: 50px 0; */
+    margin-left: auto;
+    margin-right: auto;
+    /* border-radius: 20px ; */
+    display: flex;
+    flex-direction: column;
+
+    background: url(../img/blury.png) no-repeat center scroll;
+    /* background-color: #000; */
+    /* -webkit-background-size: cover;
+    -moz-background-size: cover; */
+    background-size: contain;
+    /* -o-background-size: cover; */
+    
 }
 
+.project-section .container {
+    width: 80%;
+    border-radius: 20px ;
+    display: flex;
+    flex-direction: row;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+}
+
+.card_description {
+    width: 50%;
+    margin: 40px;
+    margin-right: 30px;
+}
+
+.card_description .title {
+    
+}
+
+.card_description .content {
+
+}
+
+.card_img {
+    width: 45%;
+    align-content: center;
+    /* height: 50vh; */
+}
+
+.card_img .img{
+    /* align-items: center; */
+    border-radius: 20px;
+    height: 50vh;
+    margin: 40px;
+    margin-left: 30px;
+    background: url(../img/intro-bg.png) no-repeat center scroll;
+
+}
 #map {
     width: 100%;
     height: 200px;
@@ -290,7 +353,7 @@ a:focus {
         padding-top: 250px;
     }
 
-    .download-section {
+    .project-section {
         padding: 100px 0;
     }
 
@@ -303,7 +366,7 @@ a:focus {
 .btn {
     border-radius: 0;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: 'Panton', sans-serif;
     font-weight: 400;
     -webkit-transition: all .3s ease-in-out;
     -moz-transition: all .3s ease-in-out;
@@ -311,17 +374,17 @@ a:focus {
 }
 
 .btn-default {
-    border: 1px solid #42dca3;
-    color: #42dca3;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
     background-color: transparent;
 }
 
 .btn-default:hover,
 .btn-default:focus {
-    border: 1px solid #42dca3;
+    border: 1px solid var(--secondary);
     outline: 0;
-    color: #000;
-    background-color: #42dca3;
+    color: var(--black);
+    background-color: var(--secondary);
 }
 
 ul.banner-social-buttons {
